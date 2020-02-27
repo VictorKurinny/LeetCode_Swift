@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AE1636782408472E002A45C4 /* LeetCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE16366E2408472E002A45C4 /* LeetCode.framework */; };
-		AE16367D2408472E002A45C4 /* LeetCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE16367C2408472E002A45C4 /* LeetCodeTests.swift */; };
 		AE16367F2408472E002A45C4 /* LeetCode.h in Headers */ = {isa = PBXBuildFile; fileRef = AE1636712408472E002A45C4 /* LeetCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE16368924085266002A45C4 /* 1220Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE16368824085266002A45C4 /* 1220Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +27,8 @@
 		AE1636712408472E002A45C4 /* LeetCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeetCode.h; sourceTree = "<group>"; };
 		AE1636722408472E002A45C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE1636772408472E002A45C4 /* LeetCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeetCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE16367C2408472E002A45C4 /* LeetCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCodeTests.swift; sourceTree = "<group>"; };
 		AE16367E2408472E002A45C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE16368824085266002A45C4 /* 1220Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1220Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +80,8 @@
 		AE16367B2408472E002A45C4 /* LeetCodeTests */ = {
 			isa = PBXGroup;
 			children = (
-				AE16367C2408472E002A45C4 /* LeetCodeTests.swift */,
 				AE16367E2408472E002A45C4 /* Info.plist */,
+				AE16368824085266002A45C4 /* 1220Tests.swift */,
 			);
 			path = LeetCodeTests;
 			sourceTree = "<group>";
@@ -202,7 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE16367D2408472E002A45C4 /* LeetCodeTests.swift in Sources */,
+				AE16368924085266002A45C4 /* 1220Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
