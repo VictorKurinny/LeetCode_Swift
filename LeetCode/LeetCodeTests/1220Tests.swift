@@ -10,73 +10,70 @@
 
 import XCTest
 
-struct Modulo {
-    let value: Int
+enum _1220 {
+    struct Modulo {
+        let value: Int
+        static let one = Modulo(1)
 
-    static func +(left: Modulo, right: Modulo) -> Modulo {
-        let mode = 1_000_000_007
-        let sum = left.value + right.value
-        if sum >= mode {
-            return Modulo(value: sum - mode)
-        } else {
-            return Modulo(value: sum)
+        init(_ value: Int) {
+            self.value = value % 1_000_000_007
+        }
+
+        static func +(left: Modulo, right: Modulo) -> Modulo {
+            return Modulo(left.value + right.value)
         }
     }
-}
 
-extension Modulo {
-    static let one = Modulo(value: 1)
-}
+    struct CountByLastSymbol {
+        var A: Modulo
+        var E: Modulo
+        var I: Modulo
+        var O: Modulo
+        var U: Modulo
+    }
 
-struct CountByLastSymbol {
-    var A: Modulo
-    var E: Modulo
-    var I: Modulo
-    var O: Modulo
-    var U: Modulo
-}
+    class Solution {
+        func countVowelPermutation(_ n: Int) -> Int {
+            var counts = CountByLastSymbol(A: .one, E: .one, I: .one, O: .one, U: .one)
 
-class Solution {
-    func countVowelPermutation(_ n: Int) -> Int {
-        var counts = CountByLastSymbol(A: .one, E: .one, I: .one, O: .one, U: .one)
+            for _ in 0..<(n-1) {
+                let tempCounts = CountByLastSymbol(
+                    A: counts.E + counts.I + counts.U,
+                    E: counts.A + counts.I,
+                    I: counts.E + counts.O,
+                    O: counts.I,
+                    U: counts.I + counts.O)
 
-        for _ in 0..<(n-1) {
-            let tempCounts = CountByLastSymbol(
-                A: counts.E + counts.I + counts.U,
-                E: counts.A + counts.I,
-                I: counts.E + counts.O,
-                O: counts.I,
-                U: counts.I + counts.O)
+                counts = tempCounts
+            }
 
-            counts = tempCounts
+            return (counts.A + counts.E + counts.I + counts.O + counts.U).value
         }
-
-        return (counts.A + counts.E + counts.I + counts.O + counts.U).value
     }
 }
 
 class _1220Tests: XCTestCase {
     func test_example1() {
-        let result = Solution().countVowelPermutation(1)
-
-        XCTAssertEqual(5, result)
+        expect(5, for: 1)
     }
 
     func test_example2() {
-        let result = Solution().countVowelPermutation(2)
-
-        XCTAssertEqual(10, result)
+        expect(10, for: 2)
     }
 
     func test_example3() {
-        let result = Solution().countVowelPermutation(5)
-
-        XCTAssertEqual(68, result)
+        expect(68, for: 5)
     }
 
     func test_answerIsCorrect_forMaxInput() {
-        let result = Solution().countVowelPermutation(20_000)
+        expect(759959057, for: 20_000)
+    }
+}
 
-        XCTAssertEqual(759959057, result)
+private extension _1220Tests {
+    func expect(_ expectedResult: Int, for input: Int, file: StaticString = #file, line: UInt = #line) {
+        let result = _1220.Solution().countVowelPermutation(input)
+
+        XCTAssertEqual(expectedResult, result, file: file, line: line)
     }
 }
