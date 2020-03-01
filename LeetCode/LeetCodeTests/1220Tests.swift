@@ -37,14 +37,12 @@ enum _1220 {
             var counts = CountByLastSymbol(A: .one, E: .one, I: .one, O: .one, U: .one)
 
             for _ in 0..<(n-1) {
-                let tempCounts = CountByLastSymbol(
+                counts = CountByLastSymbol(
                     A: counts.E + counts.I + counts.U,
                     E: counts.A + counts.I,
                     I: counts.E + counts.O,
                     O: counts.I,
                     U: counts.I + counts.O)
-
-                counts = tempCounts
             }
 
             return (counts.A + counts.E + counts.I + counts.O + counts.U).value
