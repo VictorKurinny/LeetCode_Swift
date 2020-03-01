@@ -10,7 +10,7 @@
 
 import XCTest
 
-enum _1220 {
+private enum _1220 {
     struct Modulo {
         let value: Int
         static let one = Modulo(1)
@@ -50,7 +50,7 @@ enum _1220 {
     }
 }
 
-class _1220Tests: XCTestCase {
+private class _1220Tests: XCTestCase {
     func test_example1() {
         expect(5, for: 1)
     }
@@ -66,9 +66,9 @@ class _1220Tests: XCTestCase {
     func test_answerIsCorrect_forMaxInput() {
         expect(759959057, for: 20_000)
     }
-}
 
-private extension _1220Tests {
+    // MARK: - Helper methods
+
     func expect(_ expectedResult: Int, for input: Int, file: StaticString = #file, line: UInt = #line) {
         let result = _1220.Solution().countVowelPermutation(input)
 
