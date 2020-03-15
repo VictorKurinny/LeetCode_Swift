@@ -23,8 +23,8 @@ private enum _0002 {
 
     class Solution {
         func addTwoNumbers(_ list1: ListNode?, _ list2: ListNode?) -> ListNode? {
-            var resultHead: ListNode?
-            var resultTail: ListNode!
+            let resultFakeHead = ListNode(-1)
+            var resultTail = resultFakeHead
             var list1Pointer = list1
             var list2Pointer = list2
             var carry = 0
@@ -43,15 +43,7 @@ private enum _0002 {
             while (list1Pointer != nil) || (list2Pointer != nil) {
                 let sum = digitFromPointer(list1Pointer) + digitFromPointer(list2Pointer) + carry
                 carry = sum / 10
-                let newNode = ListNode(sum % 10)
-
-                if resultHead == nil {
-                    resultHead = newNode
-                    resultTail = newNode
-                } else {
-                    appendNode(newNode)
-                }
-
+                appendNode(ListNode(sum % 10))
                 list1Pointer = list1Pointer?.next
                 list2Pointer = list2Pointer?.next
             }
@@ -60,7 +52,7 @@ private enum _0002 {
                 appendNode(ListNode(carry))
             }
 
-            return resultHead
+            return resultFakeHead.next
         }
     }
 }
