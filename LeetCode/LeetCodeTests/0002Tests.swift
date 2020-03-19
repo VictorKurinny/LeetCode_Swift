@@ -57,7 +57,7 @@ private enum _0002 {
     }
 }
 
-private class _0002Tests: XCTestCase {
+class _0002Tests: XCTestCase {
     func test_onePlusOneEqualsTwo() {
         let one = list(from: [1])
 
@@ -103,7 +103,7 @@ private class _0002Tests: XCTestCase {
 
     // MARK: - Helper methods
 
-    func digits(from list: _0002.ListNode?) -> [Int] {
+    private func digits(from list: _0002.ListNode?) -> [Int] {
         var reversedResult = [Int]()
         var listHead = list
 
@@ -115,7 +115,7 @@ private class _0002Tests: XCTestCase {
         return reversedResult.reversed()
     }
 
-    func list(from digits: [Int]) -> _0002.ListNode? {
+    private func list(from digits: [Int]) -> _0002.ListNode? {
         var listHead: _0002.ListNode?
 
         for digit in digits {

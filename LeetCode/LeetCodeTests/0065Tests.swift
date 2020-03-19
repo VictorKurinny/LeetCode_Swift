@@ -88,7 +88,7 @@ class _0065Tests: XCTestCase {
 
     // MARK: - Helper methods
 
-    func expect(_ expectedResult: Bool, for input: String, file: StaticString = #file, line: UInt = #line) {
+    private func expect(_ expectedResult: Bool, for input: String, file: StaticString = #file, line: UInt = #line) {
         let result = _0065.Solution().isNumber(input)
 
         XCTAssertEqual(expectedResult, result, "Expected \(expectedResult), got \(result) instead", file: file, line: line)

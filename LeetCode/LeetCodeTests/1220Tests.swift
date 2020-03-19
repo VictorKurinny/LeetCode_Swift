@@ -50,7 +50,7 @@ private enum _1220 {
     }
 }
 
-private class _1220Tests: XCTestCase {
+class _1220Tests: XCTestCase {
     func test_example1() {
         expect(5, for: 1)
     }
@@ -69,7 +69,7 @@ private class _1220Tests: XCTestCase {
 
     // MARK: - Helper methods
 
-    func expect(_ expectedResult: Int, for input: Int, file: StaticString = #file, line: UInt = #line) {
+    private func expect(_ expectedResult: Int, for input: Int, file: StaticString = #file, line: UInt = #line) {
         let result = _1220.Solution().countVowelPermutation(input)
 
         XCTAssertEqual(expectedResult, result, file: file, line: line)
