@@ -11,7 +11,7 @@
 		AE16367F2408472E002A45C4 /* LeetCode.h in Headers */ = {isa = PBXBuildFile; fileRef = AE1636712408472E002A45C4 /* LeetCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE16368924085266002A45C4 /* 1220Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE16368824085266002A45C4 /* 1220Tests.swift */; };
 		AE77CE40241E950C004F4AFF /* 0002Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE77CE3F241E950C004F4AFF /* 0002Tests.swift */; };
-		AEBD487D2423E803006D6FE5 /* 0065Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD487C2423E803006D6FE5 /* 0065Tests.swift */; };
+		AEBD487D2423E803006D6FE5 /* 0065aTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD487C2423E803006D6FE5 /* 0065aTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +32,7 @@
 		AE16367E2408472E002A45C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE16368824085266002A45C4 /* 1220Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1220Tests.swift; sourceTree = "<group>"; };
 		AE77CE3F241E950C004F4AFF /* 0002Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 0002Tests.swift; sourceTree = "<group>"; };
-		AEBD487C2423E803006D6FE5 /* 0065Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 0065Tests.swift; sourceTree = "<group>"; };
+		AEBD487C2423E803006D6FE5 /* 0065aTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 0065aTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +86,7 @@
 			children = (
 				AE16367E2408472E002A45C4 /* Info.plist */,
 				AE77CE3F241E950C004F4AFF /* 0002Tests.swift */,
-				AEBD487C2423E803006D6FE5 /* 0065Tests.swift */,
+				AEBD487C2423E803006D6FE5 /* 0065aTests.swift */,
 				AE16368824085266002A45C4 /* 1220Tests.swift */,
 			);
 			path = LeetCodeTests;
@@ -209,7 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE16368924085266002A45C4 /* 1220Tests.swift in Sources */,
-				AEBD487D2423E803006D6FE5 /* 0065Tests.swift in Sources */,
+				AEBD487D2423E803006D6FE5 /* 0065aTests.swift in Sources */,
 				AE77CE40241E950C004F4AFF /* 0002Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
